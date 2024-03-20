@@ -1,9 +1,26 @@
 
 let numero = Number(prompt("Digite um numero inteiro."))
 
-i=0
 
-for(i=0; i <= numero ;i++ ) {
-    console.log(i)
+
+for(i=numero; i>0; i-=1){
+
+let divisivel = 0    
+
+
+    for(b=1;b<=i;b++){
+        let resto = i%b
+        if(resto == 0){
+                
+                divisivel++
+
+        }
+    }
+if(divisivel <= 2){
+    console.log(`[${i}]`)
 }
-console.log("Fim!")
+else{
+    console.log(`${i}`)
+}
+
+}
